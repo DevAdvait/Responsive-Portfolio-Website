@@ -1,0 +1,183 @@
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  background: linear-gradient(to right, #007bff, #004288);
+  min-height: 60vh;
+}
+header div {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Drop-in text animation */
+@keyframes dropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#name span {
+  display: inline-block;
+  opacity: 0;
+  animation: dropIn 0.6s forwards;
+}
+
+/* Wave animation */
+@keyframes waveHand {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.wave {
+  display: inline-block;
+  animation: waveHand 2s infinite;
+  transform-origin: 70% 70%;
+}
+
+/* Role text glowing gradient */
+.role-glow {
+  font-weight: bold;
+  font-size: 1.25rem;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.role {
+  background: linear-gradient(90deg, #ffffff, #00ffff, #ffffff);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientGlow 4s linear infinite;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes gradientGlow {
+  0% {
+    background-position: 200% center;
+  }
+  50% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/* About Me  */
+
+/* Skills Icons */
+#about i {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+/* When visible, animate in */
+#about i.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: Add hover effect */
+#about i:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Ensure all project cards are equal height */
+#projects .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Consistent image sizing */
+#projects .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Truncate text for consistent size */
+.card-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3; /* Show 3 lines max */
+  -webkit-box-orient: vertical;
+}
+
+/* View More text style */
+.view-more {
+  color: #007bff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+/* Animation defaults */
+.project-card {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.6s ease-out;
+}
+
+/* When visible */
+.project-card.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
