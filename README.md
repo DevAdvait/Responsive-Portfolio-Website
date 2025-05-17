@@ -32,7 +32,8 @@ This is a modern, responsive portfolio website built using **HTML**, **CSS**, **
 
 ## 📸 Preview
 
-![preview](https://github.com/user-attachments/assets/b13b4f81-6618-41f7-ac4a-2a0c4d343b5b)
+![preview](https://github.com/user-attachments/assets/cf33c49c-a2e7-41c8-a425-170e4af07e8f)
+
 
 ---
 
